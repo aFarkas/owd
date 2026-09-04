@@ -54,6 +54,43 @@
       <tr><td>30 m</td><td>4 bar</td><td>¼</td></tr>
     </tbody>
   </table>
+  <figure class="dgm">
+    <svg viewBox="0 0 640 360" role="img" aria-label="Wassersäule von 0 bis 30 Meter: alle 10 Meter steigt der Absolutdruck um 1 bar (1, 2, 3, 4 bar), und dasselbe Luftpaket schrumpft auf 1, ein Halb, ein Drittel und ein Viertel.">
+      <text class="dg-t sm soft" x="20" y="24">Tiefe</text>
+      <text class="dg-t sm deep" x="92" y="24" text-anchor="middle">Druck</text>
+      <text class="dg-t sm teal" x="470" y="24" text-anchor="middle">Luftvolumen (Boyle)</text>
+      <rect class="dg-f-water dg-s-rule" x="135" y="38" width="425" height="306" rx="5"/>
+      <!-- 0 m -->
+      <line class="dg-s-faint" x1="135" y1="80" x2="560" y2="80" stroke-width="1" stroke-dasharray="3 4"/>
+      <text class="dg-t sm" x="20" y="84">0 m</text>
+      <rect class="dg-f-deep" x="62" y="65" width="60" height="30" rx="6"/>
+      <text class="dg-t on-deep" x="92" y="85" text-anchor="middle">1 bar</text>
+      <circle class="dg-f-tealsoft dg-s-teal" cx="470" cy="80" r="38" stroke-width="2"/>
+      <text class="dg-t teal b lg" x="470" y="86" text-anchor="middle">1</text>
+      <!-- 10 m -->
+      <line class="dg-s-faint" x1="135" y1="150" x2="560" y2="150" stroke-width="1" stroke-dasharray="3 4"/>
+      <text class="dg-t sm" x="20" y="154">10 m</text>
+      <rect class="dg-f-deep" x="62" y="135" width="60" height="30" rx="6"/>
+      <text class="dg-t on-deep" x="92" y="155" text-anchor="middle">2 bar</text>
+      <circle class="dg-f-tealsoft dg-s-teal" cx="470" cy="150" r="30" stroke-width="2"/>
+      <text class="dg-t teal b" x="470" y="155" text-anchor="middle">½</text>
+      <!-- 20 m -->
+      <line class="dg-s-faint" x1="135" y1="220" x2="560" y2="220" stroke-width="1" stroke-dasharray="3 4"/>
+      <text class="dg-t sm" x="20" y="224">20 m</text>
+      <rect class="dg-f-deep" x="62" y="205" width="60" height="30" rx="6"/>
+      <text class="dg-t on-deep" x="92" y="225" text-anchor="middle">3 bar</text>
+      <circle class="dg-f-tealsoft dg-s-teal" cx="470" cy="220" r="26" stroke-width="2"/>
+      <text class="dg-t teal b" x="470" y="225" text-anchor="middle">⅓</text>
+      <!-- 30 m -->
+      <line class="dg-s-faint" x1="135" y1="290" x2="560" y2="290" stroke-width="1" stroke-dasharray="3 4"/>
+      <text class="dg-t sm" x="20" y="294">30 m</text>
+      <rect class="dg-f-deep" x="62" y="275" width="60" height="30" rx="6"/>
+      <text class="dg-t on-deep" x="92" y="295" text-anchor="middle">4 bar</text>
+      <circle class="dg-f-tealsoft dg-s-teal" cx="470" cy="290" r="24" stroke-width="2"/>
+      <text class="dg-t teal b" x="470" y="295" text-anchor="middle">¼</text>
+    </svg>
+    <figcaption>Boyle an der Wassersäule: je 10 m Tiefe +1 bar Absolutdruck (1 → 4 bar), und dasselbe Luftpaket schrumpft auf 1 → ½ → ⅓ → ¼. Die größte relative Änderung liegt zwischen 0 und 10 m.</figcaption>
+  </figure>
   <div class="callout note"><span class="label">SSI-Beispiel</span>
   <p>Eine Lungenfüllung von 5 Litern in 10 m (2 bar) dehnt sich beim Auftauchen an die Oberfläche (1 bar) auf <strong>10 Liter</strong> aus — das doppelte Lungenvolumen.<sup class="ref"><a href="#s3">3</a></sup> Deine Lunge fasst das nicht. Deshalb: ausatmen lassen.</p></div>
 
@@ -63,6 +100,42 @@
 
   <h2>4. Druckausgleich: Ohren, Nebenhöhlen, Maske</h2>
   <p>Beim Abtauchen drückt der steigende Druck aufs Trommelfell. Du gleichst den <span class="term">Druckausgleich</span> <span class="en">equalization</span> aktiv aus, indem du Luft ins Mittelohr schickst — über die Eustachische Röhre <span class="en">Eustachian tube</span>.<sup class="ref"><a href="#s4">4</a></sup></p>
+  <figure class="dgm">
+    <svg viewBox="0 0 640 360" role="img" aria-label="Schematischer Querschnitt des Ohrs: Gehörgang, Trommelfell, luftgefülltes Mittelohr und die Eustachische Röhre, die zum Nasen-Rachen-Raum führt. Ein Pfeil zeigt, wie beim Valsalva-Manöver Luft aus dem Rachen durch die Röhre ins Mittelohr strömt und das Trommelfell entlastet.">
+      <!-- Ohrmuschel -->
+      <path class="dg-s-soft dg-f-none" d="M78,96 C52,90 34,104 32,128 C30,150 44,176 74,170" stroke-width="2.5"/>
+      <path class="dg-s-soft dg-f-none" d="M70,110 C56,112 50,126 54,140 C58,154 70,158 76,152" stroke-width="2"/>
+      <text class="dg-t sm soft" x="52" y="196" text-anchor="middle">Ohrmuschel</text>
+      <!-- Gehörgang -->
+      <polygon class="dg-f-paper2" points="78,120 238,112 238,158 74,150"/>
+      <line class="dg-s-soft" x1="78" y1="120" x2="238" y2="112" stroke-width="2"/>
+      <line class="dg-s-soft" x1="74" y1="150" x2="238" y2="158" stroke-width="2"/>
+      <text class="dg-t sm soft" x="150" y="139" text-anchor="middle">Gehörgang</text>
+      <!-- Trommelfell -->
+      <line class="dg-s-deep" x1="238" y1="108" x2="246" y2="160" stroke-width="4"/>
+      <line class="dg-s-faint" x1="238" y1="150" x2="220" y2="182"/>
+      <text class="dg-t sm deep" x="214" y="194" text-anchor="middle">Trommelfell</text>
+      <text class="dg-t sm soft" x="214" y="208" text-anchor="middle">(eardrum)</text>
+      <!-- Mittelohr -->
+      <rect class="dg-f-tealsoft dg-s-teal" x="250" y="104" width="94" height="64" rx="12" stroke-width="2"/>
+      <text class="dg-t sm deep b" x="297" y="98" text-anchor="middle">Mittelohr</text>
+      <text class="dg-t sm soft" x="318" y="140" text-anchor="middle">Luft</text>
+      <!-- Eustachische Röhre -->
+      <path class="dg-s-soft dg-f-none" d="M296,168 C300,210 360,250 424,278" stroke-width="15" stroke-linecap="round"/>
+      <text class="dg-t sm deep" x="372" y="196">Eustachische Röhre</text>
+      <text class="dg-t sm soft" x="372" y="210">(Eustachian tube)</text>
+      <line class="dg-s-faint" x1="368" y1="206" x2="348" y2="244"/>
+      <!-- Rachen -->
+      <rect class="dg-f-water dg-s-rule" x="386" y="250" width="210" height="88" rx="18" stroke-width="1.5"/>
+      <text class="dg-t sm soft" x="491" y="270" text-anchor="middle">Nase zuhalten</text>
+      <text class="dg-t sm deep b" x="491" y="302" text-anchor="middle">Nasen-Rachen-Raum</text>
+      <text class="dg-t sm soft" x="491" y="318" text-anchor="middle">(Rachen)</text>
+      <!-- Valsalva-Luftstrom -->
+      <path class="dg-s-teal dg-f-none" d="M420,276 C372,258 306,224 300,172" stroke-width="4" stroke-linecap="round"/>
+      <polygon class="dg-f-teal" points="300,162 293,177 309,173"/>
+    </svg>
+    <figcaption>Druckausgleich am Ohr: Beim Valsalva hältst du die Nase zu und atmest sanft dagegen — Luft strömt aus dem Rachen durch die Eustachische Röhre ins luftgefüllte Mittelohr und entlastet das nach innen gedrückte Trommelfell.</figcaption>
+  </figure>
   <table>
     <thead><tr><th>Technik</th><th>So geht's</th></tr></thead>
     <tbody>

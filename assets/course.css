@@ -451,3 +451,55 @@ sup.ref a {
 .center { text-align: center; }
 figure { margin: 1.6rem 0; }
 figcaption { font-family: var(--sans); font-size: .82rem; color: var(--ink-soft); margin-top: .5rem; }
+
+/* ------------------------- Diagramme (Inline-SVG) ---------------------- */
+/* Alle Kurs-Diagramme sind selbsttragende Inline-SVGs. Farben NUR über diese
+   Klassen (oder inline style="fill:var(--…)") — dann folgen sie automatisch
+   Hell/Dunkel-Modus und Druck. viewBox skaliert, Breite = 100 %. */
+figure.dgm { margin: 1.9rem 0; }
+figure.dgm > svg {
+  width: 100%; height: auto; display: block;
+  border: 1px solid var(--rule); border-radius: 12px;
+  background: var(--paper-2); padding: .7rem;
+}
+figure.dgm.plain > svg { border: none; background: none; padding: 0; }
+
+/* Konturen / Linien */
+.dg-s-ink   { stroke: var(--ink); }
+.dg-s-soft  { stroke: var(--ink-soft); }
+.dg-s-faint { stroke: var(--ink-faint); }
+.dg-s-rule  { stroke: var(--rule); }
+.dg-s-deep  { stroke: var(--deep); }
+.dg-s-teal  { stroke: var(--teal); }
+.dg-s-sun   { stroke: var(--sun); }
+.dg-s-safety{ stroke: var(--safety-br); }
+.dg-s-ok    { stroke: var(--ok); }
+.dg-s-paper { stroke: var(--paper); }
+
+/* Flächen */
+.dg-f-none    { fill: none; }
+.dg-f-ink     { fill: var(--ink); }
+.dg-f-soft    { fill: var(--ink-soft); }
+.dg-f-paper   { fill: var(--paper); }
+.dg-f-paper2  { fill: var(--paper-2); }
+.dg-f-deep    { fill: var(--deep); }
+.dg-f-teal    { fill: var(--teal); }
+.dg-f-tealsoft{ fill: var(--teal-soft); }
+.dg-f-sun     { fill: var(--sun); }
+.dg-f-water   { fill: var(--note-bg); }
+.dg-f-safety  { fill: var(--safety-bg); }
+.dg-f-tip     { fill: var(--tip-bg); }
+.dg-f-key     { fill: var(--key-bg); }
+.dg-f-ok      { fill: var(--ok); }
+
+/* Beschriftungen */
+.dg-t       { font-family: var(--sans); fill: var(--ink); font-size: 13px; }
+.dg-t.sm    { font-size: 11px; }
+.dg-t.lg    { font-size: 15px; }
+.dg-t.deep  { fill: var(--deep); font-weight: 650; }
+.dg-t.teal  { fill: var(--teal); font-weight: 650; }
+.dg-t.soft  { fill: var(--ink-soft); }
+.dg-t.sun   { fill: var(--sun); font-weight: 650; }
+.dg-t.b     { font-weight: 700; }
+.dg-t.on-deep { fill: var(--paper); font-weight: 700; }   /* Text auf dunkler Fläche */
+@media (prefers-color-scheme: dark){ .dg-t.on-deep { fill: #08131b; } }

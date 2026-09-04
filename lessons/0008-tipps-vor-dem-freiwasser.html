@@ -45,6 +45,80 @@
   <h2>👂🥽 Druckausgleich — im Freiwasser dein wichtigster Handgriff</h2>
   <p>Der <span class="term">Druckausgleich</span> <span class="en">equalization</span> ist im echten Wasser noch wichtiger als im Pool: Du tauchst <em>tiefer</em>, und die <strong>ersten Meter</strong> sind am heikelsten — dort ändert sich der Druck relativ am stärksten (0 → 10 m verdoppelt ihn).<sup class="ref"><a href="#s3">3</a></sup> Ein zu spät gesetzter Ausgleich muss gegen den bereits aufgebauten Druck ankämpfen — das <strong>belastet das Ohr und tut weh</strong>. Umgekehrt gilt: <strong>früh &amp; oft ausgleichen schont dein Ohr und macht das Tauchen erst richtig angenehm</strong> — genau darum lohnt es sich, es zur Gewohnheit zu machen.</p>
 
+  <figure class="dgm">
+    <svg viewBox="0 0 640 524" role="img" aria-label="Tiefenskala von 0 bis 18 Meter als Merkbild für den Druckausgleich. Schon an der Oberfläche und ab dem ersten Meter beginnen, bevor etwas drückt. Die ersten Meter sind am heikelsten: von 0 auf 10 Meter verdoppelt sich der Druck. Alle halbe bis ein Meter sanft ausgleichen mit Valsalva, schlucken oder Kieferbewegung. Nie gegen Schmerz: klemmt es, ein Stück auftauchen, entspannen, sanft neu ansetzen. Maske nicht vergessen: ab und zu etwas durch die Nase in die Maske ausatmen gegen mask squeeze.">
+      <defs>
+        <marker id="arr8" markerWidth="10" markerHeight="10" refX="7" refY="3" orient="auto">
+          <path d="M0,0 L7,3 L0,6 Z" class="dg-f-soft"/>
+        </marker>
+      </defs>
+
+      <text x="70" y="58" text-anchor="middle" class="dg-t sm soft">Tiefe</text>
+
+      <!-- Wassersäule -->
+      <rect x="90" y="70" width="70" height="382" class="dg-f-water"/>
+      <!-- heikelste Zone 0–10 m -->
+      <rect x="90" y="70" width="70" height="212" class="dg-f-safety"/>
+      <line x1="90" y1="70" x2="160" y2="70" class="dg-s-teal" stroke-width="2"/>
+
+      <!-- Tiefen-Ticks -->
+      <g class="dg-t sm soft">
+        <text x="82" y="74" text-anchor="end">0 m</text>
+        <text x="82" y="180" text-anchor="end">5 m</text>
+        <text x="82" y="286" text-anchor="end">10 m</text>
+        <text x="82" y="392" text-anchor="end">15 m</text>
+        <text x="82" y="456" text-anchor="end">18 m</text>
+      </g>
+      <line x1="84" y1="70" x2="90" y2="70" class="dg-s-soft" stroke-width="1.5"/>
+      <line x1="84" y1="176" x2="90" y2="176" class="dg-s-soft" stroke-width="1.5"/>
+      <line x1="84" y1="282" x2="90" y2="282" class="dg-s-soft" stroke-width="1.5"/>
+      <line x1="84" y1="388" x2="90" y2="388" class="dg-s-soft" stroke-width="1.5"/>
+      <line x1="84" y1="452" x2="90" y2="452" class="dg-s-soft" stroke-width="1.5"/>
+
+      <!-- Ausgleich-Marker entlang der Säule -->
+      <circle cx="160" cy="70" r="4" class="dg-f-teal"/>
+      <circle cx="160" cy="112" r="4" class="dg-f-teal"/>
+      <circle cx="160" cy="155" r="4" class="dg-f-teal"/>
+      <circle cx="160" cy="197" r="4" class="dg-f-teal"/>
+      <circle cx="160" cy="240" r="4" class="dg-f-teal"/>
+      <circle cx="160" cy="282" r="4" class="dg-f-teal"/>
+      <circle cx="160" cy="346" r="4" class="dg-f-teal"/>
+      <circle cx="160" cy="410" r="4" class="dg-f-teal"/>
+
+      <!-- kleiner Taucher -->
+      <circle cx="125" cy="176" r="9" class="dg-f-tealsoft dg-s-teal" stroke-width="1.5"/>
+      <line x1="125" y1="185" x2="125" y2="210" class="dg-s-teal" stroke-width="4" stroke-linecap="round"/>
+
+      <!-- Verbindungslinien -->
+      <line x1="160" y1="88" x2="210" y2="100" class="dg-s-faint" stroke-width="1" stroke-dasharray="4 5"/>
+      <line x1="160" y1="176" x2="210" y2="180" class="dg-s-faint" stroke-width="1" stroke-dasharray="4 5"/>
+      <line x1="160" y1="282" x2="210" y2="312" class="dg-s-faint" stroke-width="1" stroke-dasharray="4 5"/>
+      <line x1="160" y1="388" x2="210" y2="396" class="dg-s-faint" stroke-width="1" stroke-dasharray="4 5"/>
+
+      <!-- Callouts -->
+      <rect x="210" y="74" width="410" height="52" rx="10" class="dg-f-tip dg-s-ok" stroke-width="1.5"/>
+      <text x="226" y="98" class="dg-t sm b">① Schon an der Oberfläche / ab dem 1. Meter</text>
+      <text x="226" y="116" class="dg-t sm soft">beginnen — bevor überhaupt etwas drückt.</text>
+
+      <rect x="210" y="150" width="410" height="60" rx="10" class="dg-f-safety dg-s-safety" stroke-width="1.5"/>
+      <text x="226" y="176" class="dg-t sm b" style="fill:var(--safety-br)">② Erste Meter am heikelsten</text>
+      <text x="226" y="196" class="dg-t sm soft">0 → 10 m verdoppelt den Druck (1 → 2 bar).</text>
+
+      <rect x="210" y="284" width="410" height="56" rx="10" class="dg-f-paper2 dg-s-teal" stroke-width="1.5"/>
+      <text x="226" y="308" class="dg-t sm b">③ Alle ½–1 m sanft ausgleichen</text>
+      <text x="226" y="328" class="dg-t sm soft">Valsalva · schlucken · Kiefer vorschieben.</text>
+
+      <rect x="210" y="366" width="410" height="60" rx="10" class="dg-f-safety dg-s-safety" stroke-width="1.5"/>
+      <text x="226" y="392" class="dg-t sm b" style="fill:var(--safety-br)">④ Nie gegen Schmerz</text>
+      <text x="226" y="412" class="dg-t sm soft">Klemmt's: ein Stück auf, entspannen, sanft neu.</text>
+
+      <!-- Maske-Nebenelement -->
+      <rect x="20" y="466" width="600" height="46" rx="10" class="dg-f-key dg-s-sun" stroke-width="1.5"/>
+      <text x="36" y="494" class="dg-t sm">Maske nicht vergessen: ab und zu etwas durch die Nase in die Maske ausatmen (gegen mask squeeze).</text>
+    </svg>
+    <figcaption>Merkbild Tiefe: früh &amp; oft ausgleichen — schon an der Oberfläche, dann alle paar Meter, nie gegen Schmerz. Die ersten Meter (0–10 m) sind die heikelsten.</figcaption>
+  </figure>
+
   <div class="callout tip"><span class="label">Ohren: die Grundregel &amp; die Technik</span>
   <p><strong>Grundregel: früh &amp; oft, nie gegen Schmerz.</strong> Fang schon an der Oberfläche bzw. ab dem ersten Meter an und gleiche <em>alle halbe bis ein Meter</em> aus — am besten, <em>bevor</em> du überhaupt Druck spürst.</p>
   <ul>

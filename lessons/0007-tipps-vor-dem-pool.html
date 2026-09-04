@@ -33,7 +33,7 @@
     <tbody>
       <tr><td><strong>Ausrüstung zusammenbauen</strong> <span class="en">assembly</span></td><td>Flasche, Regler, Jacket, Blei zum System montieren</td><td>Merke die Reihenfolge einmal bewusst — dann wird's Routine. Ventil <em>ganz</em> öffnen.</td></tr>
       <tr><td><strong>Maske ausblasen</strong> <span class="en">mask clearing</span></td><td>Wasser aus der gefluteten Maske entfernen</td><td>Oben andrücken, nach oben schauen, <em>durch die Nase</em> ausatmen. Klassiker-Fehler: durch den Mund pusten.</td></tr>
-      <tr><td><strong>Maske ganz abnehmen</strong> <span class="en">mask removal</span></td><td>Maske ab, wieder auf, ausblasen</td><td>Vorher ein paar Mal ruhig durch den Mund atmen üben — nimmt die Angst. Augen darfst du dabei zumachen: mit Kontaktlinsen ist das sogar klüger, die Maske findest du auch blind wieder.</td></tr>
+      <tr><td><strong>Maske ganz abnehmen</strong> <span class="en">mask removal</span></td><td>Maske ab, wieder auf, ausblasen</td><td>Vorher ein paar Mal ruhig durch den Mund atmen üben — nimmt die Angst. Augen offen zu haben ist grundsätzlich gut (Orientierung, Maske wiederfinden); als Kontaktlinsenträgerin darfst du sie aber bewusst zumachen, um die Linsen nicht zu verlieren — die Maske findest du auch blind wieder.</td></tr>
       <tr><td><strong>Regler wiederfinden</strong> <span class="en">reg recovery</span></td><td>Herausgefallene zweite Stufe zurückholen &amp; ausblasen</td><td>Rechten Arm nach hinten-unten schwenken „sweep". Ausblasen: ausatmen <em>oder</em> kurz Spülknopf.</td></tr>
       <tr><td><strong>Luft vom Buddy</strong> <span class="en">alternate air source</span></td><td>Oktopus des Partners nutzen (out-of-air)</td><td>Zeichen klar geben, festen Blickkontakt, gemeinsam ruhig — nicht hektisch.</td></tr>
       <tr><td><strong>Tarierung / Schweben</strong> <span class="en">buoyancy, hovering</span></td><td>Neutral schweben, mit Atmung feinsteuern</td><td>Grob mit dem Jacket, fein mit der Atmung: einatmen = leicht steigen, ausatmen = leicht sinken. Geduld!</td></tr>
@@ -52,6 +52,56 @@
     <li><strong>Waagerecht schwebend:</strong> denselben Winkel triffst du erst, wenn du den Kopf spürbar stärker in den Nacken legst — es fühlt sich nach „viel weiter hoch" an, ist aber dieselbe Ziel-Position.</li>
   </ul>
   <p>Merksatz: nicht „so weit hoch wie möglich", sondern „Gesicht leicht Richtung Oberfläche" — egal in welcher Lage.</p></div>
+
+  <figure class="dgm">
+    <svg viewBox="0 0 640 480" role="img" aria-label="Maske ausblasen und der Winkel zur Oberfläche. Links kniend oder aufrecht: der Blick wird nur leicht angehoben. Rechts waagerecht schwebend: der Kopf muss spürbar mehr in den Nacken, um denselben Winkel zur Oberfläche zu treffen. In beiden Lagen zeigt der Blick im gleichen Winkel zur Oberfläche. Die gestrichelte Linie markiert den horizontalen Geradeausblick, parallel zur Oberfläche; der Pfeil ist nur leicht nach oben geneigt. Ablauf: Maske oben andrücken, durch die Nase ausatmen, Wasser wird unten herausgedrückt. Augen offen hilft bei der Orientierung und beim Wiederfinden der Maske; als Kontaktlinsenträgerin darfst du die Augen zum Schutz der Linsen bewusst schließen.">
+      <defs>
+        <marker id="arr7" markerWidth="10" markerHeight="10" refX="7" refY="3" orient="auto">
+          <path d="M0,0 L7,3 L0,6 Z" class="dg-f-teal"/>
+        </marker>
+      </defs>
+
+      <!-- Oberfläche -->
+      <rect x="0" y="0" width="640" height="40" class="dg-f-water"/>
+      <line x1="0" y1="40" x2="640" y2="40" class="dg-s-teal" stroke-width="2"/>
+      <text x="20" y="26" class="dg-t sm soft">Oberfläche ↑ (oben in der Maske sammelt sich die ausgeatmete Luft)</text>
+      <line x1="320" y1="60" x2="320" y2="336" class="dg-s-faint" stroke-width="1" stroke-dasharray="4 5"/>
+
+      <!-- Panel A: kniend/aufrecht -->
+      <text x="175" y="74" text-anchor="middle" class="dg-t b">Kniend / aufrecht</text>
+      <line x1="175" y1="192" x2="175" y2="300" class="dg-s-teal" stroke-width="6" stroke-linecap="round"/>
+      <line x1="112" y1="192" x2="238" y2="192" class="dg-s-soft" stroke-width="1" stroke-dasharray="4 5"/>
+      <text x="146" y="187" text-anchor="end" class="dg-t sm soft">geradeaus (horizontal)</text>
+      <circle cx="175" cy="192" r="26" class="dg-f-tealsoft dg-s-teal" stroke-width="2"/>
+      <ellipse cx="160" cy="180" rx="12" ry="8" class="dg-f-paper dg-s-ink" stroke-width="1.5"/>
+      <line x1="175" y1="192" x2="96" y2="137" class="dg-s-teal" stroke-width="2.5" marker-end="url(#arr7)"/>
+      <circle cx="144" cy="170" r="3" class="dg-f-teal"/>
+      <circle cx="130" cy="160" r="2.5" class="dg-f-teal"/>
+      <text x="175" y="326" text-anchor="middle" class="dg-t sm soft">leichtes Anheben des Blicks reicht</text>
+
+      <!-- Panel B: waagerecht schwebend -->
+      <text x="470" y="74" text-anchor="middle" class="dg-t b">Waagerecht schwebend</text>
+      <line x1="496" y1="210" x2="576" y2="210" class="dg-s-teal" stroke-width="6" stroke-linecap="round"/>
+      <line x1="408" y1="210" x2="534" y2="210" class="dg-s-soft" stroke-width="1" stroke-dasharray="4 5"/>
+      <text x="441" y="205" text-anchor="end" class="dg-t sm soft">geradeaus (horizontal)</text>
+      <circle cx="470" cy="210" r="26" class="dg-f-tealsoft dg-s-teal" stroke-width="2"/>
+      <ellipse cx="455" cy="198" rx="12" ry="8" class="dg-f-paper dg-s-ink" stroke-width="1.5"/>
+      <line x1="470" y1="210" x2="391" y2="155" class="dg-s-teal" stroke-width="2.5" marker-end="url(#arr7)"/>
+      <circle cx="439" cy="188" r="3" class="dg-f-teal"/>
+      <circle cx="425" cy="178" r="2.5" class="dg-f-teal"/>
+      <text x="470" y="326" text-anchor="middle" class="dg-t sm soft">Kopf spürbar mehr in den Nacken —</text>
+      <text x="470" y="342" text-anchor="middle" class="dg-t sm soft">derselbe Winkel zur Oberfläche</text>
+
+      <!-- Ablauf-Box -->
+      <rect x="24" y="356" width="592" height="116" rx="12" class="dg-f-tip dg-s-ok" stroke-width="1.5"/>
+      <text x="44" y="384" class="dg-t b">Maske ausblasen — so geht's:</text>
+      <text x="44" y="405" class="dg-t sm">1 · Maske oben andrücken   2 · durch die Nase ausatmen   3 · Wasser wird unten herausgedrückt</text>
+      <text x="44" y="424" class="dg-t sm">Merksatz: „Gesicht leicht Richtung Oberfläche" — nicht so weit hoch wie möglich.</text>
+      <text x="44" y="444" class="dg-t sm teal">Augen offen hilft dir bei der Orientierung und die Maske wiederzufinden — grundsätzlich gut.</text>
+      <text x="44" y="462" class="dg-t sm teal">Als Kontaktlinsenträgerin darfst du sie aber bewusst zumachen, um die Linsen nicht zu verlieren.</text>
+    </svg>
+    <figcaption>Nicht der Kopf zum Körper zählt, sondern der Winkel des Gesichts zur Oberfläche. Der ist in beiden Lagen gleich — nur waagerecht fühlt er sich nach „viel weiter hoch" an.</figcaption>
+  </figure>
 
   <h2>Der Tarier-/Bleicheck an der Oberfläche</h2>
   <p>Damit du weder wie ein Stein sinkst noch oben treibst, machst du einen <span class="term">Bleicheck</span> <span class="en">weight/buoyancy check</span>: mit <strong>leerem Jacket</strong> und normalem Atemzug solltest du etwa <strong>auf Augenhöhe</strong> im Wasser schweben — atmest du aus, sinkst du langsam.<sup class="ref"><a href="#s1">1</a></sup> Sinkst du sofort weg → zu viel Blei; treibst du oben → zu wenig. Zu viel Blei macht das Tarieren schwer und kostet Luft — lieber genau richtig als „sicher viel".</p>
