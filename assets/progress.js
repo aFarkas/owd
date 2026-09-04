@@ -180,30 +180,52 @@
     "0007-tipps-vor-dem-pool", "0008-tipps-vor-dem-freiwasser", "0009-abschlusstest"
   ];
 
+  function badgeHTML(pct) {
+    return pct == null
+      ? '<span class="pg-none">offen</span>'
+      : '<span class="pg-pct ' + (pct >= 80 ? "ok" : "low") + '">' + pct + ' %</span>';
+  }
+
+  // Fortschritts-Badge direkt in die echten Lektionslisten (index.html) einblenden,
+  // gematcht über den Dateinamen im href. So gibt es keine doppelte Liste mehr.
+  function injectLessonBadges(data) {
+    var links = document.querySelectorAll(".lesson-list a[href]");
+    Array.prototype.forEach.call(links, function (a) {
+      if (a.querySelector(".lesson-badge")) return;              // nicht doppelt
+      var file = (a.getAttribute("href") || "").split("/").pop().replace(/\.html?$/i, "");
+      if (!file) return;
+      var e = data.lessons[file];
+      var pct = e && e.lastQuiz ? e.lastQuiz.pct : null;
+      var span = document.createElement("span");
+      span.className = "lesson-badge";
+      span.innerHTML = badgeHTML(pct);
+      a.appendChild(span);
+    });
+  }
+
   function renderDashboard() {
+    var data = load();
+
+    // 1) Badges in die Lektionslisten unten schreiben (falls vorhanden).
+    injectLessonBadges(data);
+
+    // 2) #owd-progress zeigt nur noch Zusammenfassung + Senden-Button.
     var mount = document.getElementById("owd-progress");
     if (!mount) return;
-    var data = load();
     var done = 0, sum = 0, cnt = 0;
-    var rows = LESSON_ORDER.map(function (id, i) {
+    LESSON_ORDER.forEach(function (id) {
       var e = data.lessons[id];
       var pct = e && e.lastQuiz ? e.lastQuiz.pct : null;
       if (pct != null) { done++; sum += pct; cnt++; }
-      var badge = pct == null ? '<span class="pg-none">offen</span>'
-        : '<span class="pg-pct ' + (pct >= 80 ? "ok" : "low") + '">' + pct + ' %</span>';
-      return '<li><span class="pg-n">' + (i + 1) + '</span>' +
-        '<span class="pg-t">' + (e ? e.title : id.replace(/^\d+-/, "").replace(/-/g, " ")) + '</span>' +
-        badge + '</li>';
-    }).join("");
+    });
 
     var avg = cnt ? Math.round(sum / cnt) : 0;
     mount.innerHTML =
       '<div class="pg-head">' +
         '<div><strong>' + done + '</strong> / ' + LESSON_ORDER.length + ' Lektionen mit Quiz' +
-        (cnt ? ' · Ø ' + avg + ' %' : '') + '</div>' +
+        (cnt ? ' · Ø ' + avg + ' %' : '') + ' · dein Stand steht bei jeder Lektion unten.</div>' +
         '<button type="button" class="fb-send-all">✉️ Gesamtfortschritt an Alexander senden</button>' +
       '</div>' +
-      '<ul class="pg-list">' + rows + '</ul>' +
       '<div class="fb-status small" role="status"></div>';
 
     mount.querySelector(".fb-send-all").addEventListener("click", function () {
