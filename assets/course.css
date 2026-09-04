@@ -292,6 +292,14 @@ sup.ref a {
 .mnemonic .row .b { font-weight: 800; color: var(--teal); font-size: 1.15rem; }
 .mnemonic .row .t { align-self: center; }
 
+/* three-column variant: English · Deutsch · ausgeschrieben */
+.mnemonic.cols3 .head,
+.mnemonic.cols3 .row { display: grid; grid-template-columns: 3.4rem 3.4rem 1fr; gap: .7rem; align-items: center; }
+.mnemonic.cols3 .head span { font-size: .74rem; font-weight: 650; text-transform: uppercase; letter-spacing: .05em; }
+.mnemonic.cols3 .row .b   { font-weight: 800; color: var(--teal); font-size: 1.15rem; }
+.mnemonic.cols3 .row .b.de { color: var(--sun); }
+.mnemonic.cols3 .row .t   { align-self: center; }
+
 /* ------------------------------- Quiz ---------------------------------- */
 .quiz {
   font-family: var(--sans);
