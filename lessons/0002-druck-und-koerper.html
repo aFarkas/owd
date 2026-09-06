@@ -98,7 +98,7 @@
   <div class="callout safety"><span class="label">Warum „nie die Luft anhalten"</span>
   <p>Hältst du beim Auftauchen die Luft an, kann die sich ausdehnende Lungenluft nicht entweichen und überdehnt das Lungengewebe: <span class="term">Lungenüberdruckunfall</span> <span class="en">lung overexpansion / pulmonary barotrauma</span> — eine der schwersten Tauchverletzungen, bis hin zur <span class="term">arteriellen Gasembolie</span> <span class="en">AGE</span>, wenn Luftblasen ins Blut gelangen.<sup class="ref"><a href="#s3">3</a></sup> <strong>Vollständig vermeidbar:</strong> ruhig und ununterbrochen weiteratmen.</p></div>
 
-  <h2>4. Druckausgleich: Ohren, Nebenhöhlen, Maske</h2>
+  <h2 id="druckausgleich">4. Druckausgleich: Ohren, Nebenhöhlen, Maske</h2>
   <p>Beim Abtauchen drückt der steigende Druck aufs Trommelfell. Du gleichst den <span class="term">Druckausgleich</span> <span class="en">equalization</span> aktiv aus, indem du Luft ins Mittelohr schickst — über die Eustachische Röhre <span class="en">Eustachian tube</span>.<sup class="ref"><a href="#s4">4</a></sup></p>
   <figure class="dgm">
     <svg viewBox="0 0 640 360" role="img" aria-label="Schematischer Querschnitt des Ohrs: Gehörgang, Trommelfell, luftgefülltes Mittelohr und die Eustachische Röhre, die zum Nasen-Rachen-Raum führt. Ein Pfeil zeigt, wie beim Valsalva-Manöver Luft aus dem Rachen durch die Röhre ins Mittelohr strömt und das Trommelfell entlastet.">
@@ -146,10 +146,85 @@
   </table>
   <div class="callout tip"><span class="label">Die Ausgleichs-Grundregel</span>
   <p><strong>Früh und oft, nie gegen Schmerz.</strong> Beginne schon an der Oberfläche/ab dem ersten Meter und gleiche regelmäßig aus — am besten <em>bevor</em> du Druck spürst. Spürst du Druck oder Schmerz: <strong>ein paar Meter auftauchen</strong>, entspannen, erneut versuchen — niemals durchpressen.<sup class="ref"><a href="#s4">4</a></sup> Erkältet? Dann <strong>nicht tauchen</strong> — verstopfte Röhren lassen sich nicht ausgleichen. Und <strong>abschwellende Mittel</strong> sind heikel: Lässt die Wirkung unten nach, droht ein umgekehrter Block.</p></div>
+
+  <figure class="dgm">
+    <svg viewBox="0 0 640 524" role="img" aria-label="Tiefenskala von 0 bis 18 Meter als Merkbild für den Druckausgleich. Schon an der Oberfläche und ab dem ersten Meter beginnen, bevor etwas drückt. Die ersten Meter sind am heikelsten: von 0 auf 10 Meter verdoppelt sich der Druck. Alle halbe bis ein Meter sanft ausgleichen mit Valsalva, schlucken oder Kieferbewegung. Nie gegen Schmerz: klemmt es, ein Stück auftauchen, entspannen, sanft neu ansetzen. Maske nicht vergessen: ab und zu etwas durch die Nase in die Maske ausatmen gegen mask squeeze.">
+      <defs>
+        <marker id="arr8" markerWidth="10" markerHeight="10" refX="7" refY="3" orient="auto">
+          <path d="M0,0 L7,3 L0,6 Z" class="dg-f-soft"/>
+        </marker>
+      </defs>
+
+      <text x="70" y="58" text-anchor="middle" class="dg-t sm soft">Tiefe</text>
+
+      <!-- Wassersäule -->
+      <rect x="90" y="70" width="70" height="382" class="dg-f-water"/>
+      <!-- heikelste Zone 0–10 m -->
+      <rect x="90" y="70" width="70" height="212" class="dg-f-safety"/>
+      <line x1="90" y1="70" x2="160" y2="70" class="dg-s-teal" stroke-width="2"/>
+
+      <!-- Tiefen-Ticks -->
+      <g class="dg-t sm soft">
+        <text x="82" y="74" text-anchor="end">0 m</text>
+        <text x="82" y="180" text-anchor="end">5 m</text>
+        <text x="82" y="286" text-anchor="end">10 m</text>
+        <text x="82" y="392" text-anchor="end">15 m</text>
+        <text x="82" y="456" text-anchor="end">18 m</text>
+      </g>
+      <line x1="84" y1="70" x2="90" y2="70" class="dg-s-soft" stroke-width="1.5"/>
+      <line x1="84" y1="176" x2="90" y2="176" class="dg-s-soft" stroke-width="1.5"/>
+      <line x1="84" y1="282" x2="90" y2="282" class="dg-s-soft" stroke-width="1.5"/>
+      <line x1="84" y1="388" x2="90" y2="388" class="dg-s-soft" stroke-width="1.5"/>
+      <line x1="84" y1="452" x2="90" y2="452" class="dg-s-soft" stroke-width="1.5"/>
+
+      <!-- Ausgleich-Marker entlang der Säule -->
+      <circle cx="160" cy="70" r="4" class="dg-f-teal"/>
+      <circle cx="160" cy="112" r="4" class="dg-f-teal"/>
+      <circle cx="160" cy="155" r="4" class="dg-f-teal"/>
+      <circle cx="160" cy="197" r="4" class="dg-f-teal"/>
+      <circle cx="160" cy="240" r="4" class="dg-f-teal"/>
+      <circle cx="160" cy="282" r="4" class="dg-f-teal"/>
+      <circle cx="160" cy="346" r="4" class="dg-f-teal"/>
+      <circle cx="160" cy="410" r="4" class="dg-f-teal"/>
+
+      <!-- kleiner Taucher -->
+      <circle cx="125" cy="176" r="9" class="dg-f-tealsoft dg-s-teal" stroke-width="1.5"/>
+      <line x1="125" y1="185" x2="125" y2="210" class="dg-s-teal" stroke-width="4" stroke-linecap="round"/>
+
+      <!-- Verbindungslinien -->
+      <line x1="160" y1="88" x2="210" y2="100" class="dg-s-faint" stroke-width="1" stroke-dasharray="4 5"/>
+      <line x1="160" y1="176" x2="210" y2="180" class="dg-s-faint" stroke-width="1" stroke-dasharray="4 5"/>
+      <line x1="160" y1="282" x2="210" y2="312" class="dg-s-faint" stroke-width="1" stroke-dasharray="4 5"/>
+      <line x1="160" y1="388" x2="210" y2="396" class="dg-s-faint" stroke-width="1" stroke-dasharray="4 5"/>
+
+      <!-- Callouts -->
+      <rect x="210" y="74" width="410" height="52" rx="10" class="dg-f-tip dg-s-ok" stroke-width="1.5"/>
+      <text x="226" y="98" class="dg-t sm b">① Schon an der Oberfläche / ab dem 1. Meter</text>
+      <text x="226" y="116" class="dg-t sm soft">beginnen — bevor überhaupt etwas drückt.</text>
+
+      <rect x="210" y="150" width="410" height="60" rx="10" class="dg-f-safety dg-s-safety" stroke-width="1.5"/>
+      <text x="226" y="176" class="dg-t sm b" style="fill:var(--safety-br)">② Erste Meter am heikelsten</text>
+      <text x="226" y="196" class="dg-t sm soft">0 → 10 m verdoppelt den Druck (1 → 2 bar).</text>
+
+      <rect x="210" y="284" width="410" height="56" rx="10" class="dg-f-paper2 dg-s-teal" stroke-width="1.5"/>
+      <text x="226" y="308" class="dg-t sm b">③ Alle ½–1 m sanft ausgleichen</text>
+      <text x="226" y="328" class="dg-t sm soft">Valsalva · schlucken · Kiefer vorschieben.</text>
+
+      <rect x="210" y="366" width="410" height="60" rx="10" class="dg-f-safety dg-s-safety" stroke-width="1.5"/>
+      <text x="226" y="392" class="dg-t sm b" style="fill:var(--safety-br)">④ Nie gegen Schmerz</text>
+      <text x="226" y="412" class="dg-t sm soft">Klemmt's: ein Stück auf, entspannen, sanft neu.</text>
+
+      <!-- Maske-Nebenelement -->
+      <rect x="20" y="466" width="600" height="46" rx="10" class="dg-f-key dg-s-sun" stroke-width="1.5"/>
+      <text x="36" y="494" class="dg-t sm">Maske nicht vergessen: ab und zu etwas durch die Nase in die Maske ausatmen (gegen mask squeeze).</text>
+    </svg>
+    <figcaption>Merkbild Tiefe: früh &amp; oft ausgleichen — schon an der Oberfläche, dann alle paar Meter, nie gegen Schmerz. Die ersten Meter (0–10 m) sind die heikelsten.</figcaption>
+  </figure>
+
   <p>Die <strong>Maske</strong> gleichst du aus, indem du etwas durch die Nase in sie ausatmest (sonst <span class="term">Maskenbarotrauma</span> <span class="en">mask squeeze</span> — rote Augen, Blutergüsse). Nebenhöhlen gleichen sich meist von selbst mit aus.</p>
 
   <h2>5. Auch beim Auftauchen: der umgekehrte Block</h2>
-  <p>Beim Aufstieg dehnt sich Luft aus und muss <em>heraus</em>. Sitzt sie fest (z. B. verschleimte Nebenhöhle, Zahn mit undichter Füllung), entsteht ein <span class="term">umgekehrter Block</span> <span class="en">reverse block</span>: Schmerz beim Auftauchen.<sup class="ref"><a href="#s5">5</a></sup> <strong>Umgang:</strong> Aufstieg stoppen, ein Stück tiefer, langsam schlucken/kauen, dann behutsam weiter. Genau deshalb tauchst du nie erkältet oder mit Zahnproblemen.</p>
+  <p>Beim Aufstieg dehnt sich Luft aus und muss <em>heraus</em>. Sitzt sie fest (z. B. verschleimte Nebenhöhle, Zahn mit undichter Füllung), entsteht ein <span class="term">umgekehrter Block</span> <span class="en">reverse block</span>: Schmerz beim Auftauchen.<sup class="ref"><a href="#s5">5</a></sup> <strong>Umgang:</strong> Aufstieg stoppen, ein Stück tiefer, langsam schlucken/kauen, dann behutsam weiter. Genau deshalb tauchst du nie erkältet oder mit Zahnproblemen. Beruhigend: Wenn du gesund tauchst und beim Abtauchen sauber ausgleichst, tritt der umgekehrte Block <strong>sehr selten</strong> auf — kennen solltest du ihn trotzdem.</p>
 
   <h2>6. Die Barotrauma-Familie im Überblick</h2>
   <p>Ein <span class="term">Barotrauma</span> ist eine Druckverletzung eines Luftraums bei fehlendem Ausgleich:<sup class="ref"><a href="#s5">5</a></sup></p>
