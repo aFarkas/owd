@@ -25,6 +25,15 @@
   .lesson-list .d { display: block; font-size: .86rem; color: var(--ink-soft); font-weight: 400; margin-top: .15rem; }
   .lesson-list .lesson-badge { margin-left: auto; padding-left: 1rem; font-family: var(--sans); white-space: nowrap; align-self: center; }
   .lesson-list a.exam { background: var(--teal-soft); border-color: var(--teal); }
+  .lesson-list li.soon > div {
+    display: flex; gap: 1rem; align-items: baseline;
+    border: 1px dashed var(--rule); border-radius: 11px;
+    padding: .85rem 1.1rem; background: transparent; cursor: default;
+  }
+  .lesson-list li.soon .n { font-weight: 800; color: var(--ink-faint); min-width: 1.6rem; font-variant-numeric: tabular-nums; }
+  .lesson-list li.soon .t { font-weight: 650; color: var(--ink-soft); }
+  .lesson-list li.soon .d { display: block; font-size: .86rem; color: var(--ink-faint); font-weight: 400; margin-top: .15rem; }
+  .lesson-list li.soon .soon-badge { margin-left: auto; align-self: center; white-space: nowrap; font-family: var(--sans); font-size: .68rem; text-transform: uppercase; letter-spacing: .1em; color: var(--ink-faint); border: 1px solid var(--rule); border-radius: 999px; padding: .12rem .6rem; }
   .sec-label { font-family: var(--sans); font-size: .72rem; letter-spacing: .14em; text-transform: uppercase; color: var(--ink-faint); font-weight: 700; margin: 2rem 0 .6rem; }
   .ref-links { display: flex; gap: .7rem; flex-wrap: wrap; }
   .ref-links a { flex: 1; min-width: 12rem; text-decoration: none; border: 1px dashed var(--teal); border-radius: 11px; padding: .9rem 1.1rem; background: var(--paper-2); font-family: var(--sans); }
@@ -37,41 +46,43 @@
   <div class="hero">
     <p class="kicker">Dein Kurs · SSI Open Water Diver</p>
     <h1>Fine taucht ab 🤿</h1>
-    <p class="lede">Willkommen zu deinem persönlichen Trainingspartner für den <strong>SSI Open Water Diver (OWD)</strong>. Neun kurze Lektionen, ein Abschlusstest und zwei Referenzkarten — alles auf Deutsch, Tauchersprache mit englischen Begriffen <span class="en">in Klammern</span>. Ergänzend zu deinem SSI-Material in der MySSI-App.</p>
+    <p class="lede">Willkommen zu deinem persönlichen Trainingspartner für den <strong>SSI Open Water Diver (OWD)</strong>. Kurze Lektionen entlang der <strong>sechs SSI-Kapitel</strong> (zwei davon — Das Meer &amp; die Tauchtabellen — kommen noch), dazu Praxis-Tipps, ein Abschlusstest und zwei Referenzkarten — alles auf Deutsch, Tauchersprache mit englischen Begriffen <span class="en">in Klammern</span>. Ergänzend zu deinem SSI-Material in der MySSI-App.</p>
   </div>
 
   <div class="callout tip"><span class="label">Wenig Zeit? Deine Praxis steht diese Woche an</span>
-  <p>Dann priorisiere: <a href="0007-tipps-vor-dem-pool.html"><strong>Lektion 7 (vor dem Pool)</strong></a> und <a href="0008-tipps-vor-dem-freiwasser.html"><strong>Lektion 8 (vor dem Freiwasser)</strong></a> bringen dich direkt praktisch nach vorn. Den <a href="0009-abschlusstest.html"><strong>Abschlusstest</strong></a> machst du, wenn du die Theorie gefestigt hast. Und der <a href="../reference/spickzettel.html">Spickzettel</a> gehört ausgedruckt in deine Tauchtasche.</p></div>
+  <p>Dann priorisiere: <a href="0009-tipps-vor-dem-pool.html"><strong>Lektion 9 (vor dem Pool)</strong></a> und <a href="0010-tipps-vor-dem-freiwasser.html"><strong>Lektion 10 (vor dem Freiwasser)</strong></a> bringen dich direkt praktisch nach vorn. Den <a href="0011-abschlusstest.html"><strong>Abschlusstest</strong></a> machst du, wenn du die Theorie gefestigt hast. Und der <a href="../reference/spickzettel.html">Spickzettel</a> gehört ausgedruckt in deine Tauchtasche.</p></div>
 
   <p class="sec-label">Dein Fortschritt</p>
   <div id="owd-progress">
     <p class="small">Sobald du Quizze machst, siehst du deinen Stand direkt bei jeder Lektion unten (gespeichert nur in diesem Browser). Über den Button schickst du deinen Gesamtstand an Alexander. <a href="feedback-hilfe.html">Wie die Feedback-Schleife funktioniert →</a></p>
   </div>
 
-  <p class="sec-label">Theorie — verstehen, warum</p>
+  <p class="sec-label">Theorie — verstehen, warum (entlang der SSI-Kapitel)</p>
   <ul class="lesson-list">
-    <li><a href="0001-willkommen.html"><span class="n">1</span><span><span class="t">Willkommen unter Wasser</span><span class="d">Wie der Kurs funktioniert, der Diver Diamond und die goldene Regel.</span></span></a></li>
-    <li><a href="0002-druck-und-koerper.html"><span class="n">2</span><span><span class="t">Druck &amp; dein Körper</span><span class="d">Druck mit der Tiefe, Boyle-Gesetz, Druckausgleich, Barotrauma.</span></span></a></li>
-    <li><a href="0003-atemgas-stickstoff-nullzeit.html"><span class="n">3</span><span><span class="t">Atemgas, Stickstoff &amp; Nullzeit</span><span class="d">Nullzeit, Dekompressionskrankheit, Sicherheitsstopp, Luftverbrauch.</span></span></a></li>
-    <li><a href="0004-ausruestung.html"><span class="n">4</span><span><span class="t">Deine Ausrüstung</span><span class="d">Das Total Diving System: Jacket, Regler, Flasche, Computer, Blei.</span></span></a></li>
-    <li><a href="0005-buddy-signale-planung.html"><span class="n">5</span><span><span class="t">Buddy, Signale &amp; Planung</span><span class="d">Tauchzeichen, Buddy-Check (BWRAF), Tauchgangsplanung.</span></span></a></li>
-    <li><a href="0006-notfaelle.html"><span class="n">6</span><span><span class="t">Notfälle souverän lösen</span><span class="d">„Luft alle", CESA, Maske, Krampf, Strömung — ruhig statt Panik.</span></span></a></li>
+    <li><a href="0001-willkommen.html"><span class="n">1</span><span><span class="t">Willkommen unter Wasser</span><span class="d">Auftakt · Wie der Kurs funktioniert, der Diver Diamond und die goldene Regel.</span></span></a></li>
+    <li><a href="0002-druck-und-koerper.html"><span class="n">2</span><span><span class="t">Druck &amp; dein Körper</span><span class="d">SSI Kapitel 1 · Druck mit der Tiefe, Boyle-Gesetz, Druckausgleich, Barotrauma.</span></span></a></li>
+    <li><a href="0003-ausruestung.html"><span class="n">3</span><span><span class="t">Deine Ausrüstung</span><span class="d">SSI Kapitel 2 · Das Total Diving System: Jacket, Regler, Flasche, Computer, Blei.</span></span></a></li>
+    <li><a href="0004-atemgas-stickstoff-nullzeit.html"><span class="n">4</span><span><span class="t">Atemgas, Stickstoff &amp; Nullzeit</span><span class="d">SSI Kapitel 3 · Nullzeit, Dekompressionskrankheit, Sicherheitsstopp, Luftverbrauch.</span></span></a></li>
+    <li><a href="0005-buddy-signale-planung.html"><span class="n">5</span><span><span class="t">Buddy, Signale &amp; Planung</span><span class="d">SSI Kapitel 4 · Tauchzeichen, Buddy-Check (BWRAF), Tauchgangsplanung.</span></span></a></li>
+    <li class="soon"><div><span class="n">6</span><span><span class="t">Das Meer &amp; deine Tauchmöglichkeiten</span><span class="d">SSI Kapitel 5 · Unterwasserwelt, Meerestiere, Süßwasser, Tauchreviere.</span></span><span class="soon-badge">folgt</span></div></li>
+    <li><a href="0007-notfaelle.html"><span class="n">7</span><span><span class="t">Notfälle souverän lösen</span><span class="d">SSI Kapitel 6 · „Luft alle", CESA, Maske, Krampf, Strömung — ruhig statt Panik.</span></span></a></li>
+    <li class="soon"><div><span class="n">8</span><span><span class="t">Tauchtabellen</span><span class="d">SSI Anhang · Tauchgangsplanung mit den SSI-Tabellen (Nullzeit, Oberflächenpause, Reststickstoff).</span></span><span class="soon-badge">folgt</span></div></li>
   </ul>
 
   <p class="sec-label">Praxis-Tipps — direkt vor dem Wasser</p>
   <ul class="lesson-list">
-    <li><a href="0007-tipps-vor-dem-pool.html"><span class="n">7</span><span><span class="t">Tipps vor deinem Pool-Tag</span><span class="d">Welche Skills kommen, ein Tipp pro Übung, die häufigsten Anfängerhürden.</span></span></a></li>
-    <li><a href="0008-tipps-vor-dem-freiwasser.html"><span class="n">8</span><span><span class="t">Tipps vor deinem Freiwasser-Tag</span><span class="d">Die fünf großen Unterschiede zum Pool — Sicht, Kälte, Blei, Orientierung.</span></span></a></li>
+    <li><a href="0009-tipps-vor-dem-pool.html"><span class="n">9</span><span><span class="t">Tipps vor deinem Pool-Tag</span><span class="d">Welche Skills kommen, ein Tipp pro Übung, die häufigsten Anfängerhürden.</span></span></a></li>
+    <li><a href="0010-tipps-vor-dem-freiwasser.html"><span class="n">10</span><span><span class="t">Tipps vor deinem Freiwasser-Tag</span><span class="d">Die fünf großen Unterschiede zum Pool — Sicht, Kälte, Blei, Orientierung.</span></span></a></li>
   </ul>
 
   <p class="sec-label">Prüfung — sicher fühlen</p>
   <ul class="lesson-list">
-    <li><a href="0009-abschlusstest.html" class="exam"><span class="n">9</span><span><span class="t">Abschlusstest</span><span class="d">45 gemischte Fragen, Auswertung gegen die 80-%-Bestehensgrenze. Wiederholbar.</span></span></a></li>
+    <li><a href="0011-abschlusstest.html" class="exam"><span class="n">11</span><span><span class="t">Abschlusstest</span><span class="d">45 gemischte Fragen, Auswertung gegen die 80-%-Bestehensgrenze. Wiederholbar.</span></span></a></li>
   </ul>
 
   <p class="sec-label">Nach dem Kurs — Ausblick</p>
   <ul class="lesson-list">
-    <li><a href="0010-nach-dem-kurs-aegypten.html"><span class="n">10</span><span><span class="t">Später im Meer: Ägypten</span><span class="d">Gedankenstütze fürs erste Salzwasser-Tauchen — Blei, Boot, Strömung, DSMB, Riff. Kein Prüfungsstoff.</span></span></a></li>
+    <li><a href="0012-nach-dem-kurs-aegypten.html"><span class="n">12</span><span><span class="t">Später im Meer: Ägypten</span><span class="d">Gedankenstütze fürs erste Salzwasser-Tauchen — Blei, Boot, Strömung, DSMB, Riff. Kein Prüfungsstoff.</span></span></a></li>
   </ul>
 
   <p class="sec-label">Referenz — zum Nachschlagen &amp; Ausdrucken</p>
