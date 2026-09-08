@@ -309,6 +309,28 @@ sup.ref a {
   margin: 1.8rem 0;
   background: var(--paper-2);
 }
+.quiz-intro {
+  font-family: var(--sans);
+  background: var(--note-bg);
+  border: 1px solid var(--note-br);
+  border-radius: 12px;
+  padding: 1rem 1.2rem;
+  margin: 1.8rem 0 -.4rem;
+  font-size: .92rem;
+  color: var(--ink);
+}
+.quiz-intro .label {
+  font-weight: 700; color: var(--note-ink); letter-spacing: .08em;
+  text-transform: uppercase; font-size: .72rem; display: block; margin-bottom: .3rem;
+}
+.quiz-intro p { margin: .5rem 0 0; line-height: 1.5; }
+.quiz-stand { color: var(--ink-soft); }
+.quiz-reset-scores {
+  font: inherit; font-size: .82rem; margin-left: .4rem;
+  padding: .2rem .7rem; border-radius: 999px; cursor: pointer;
+  border: 1px solid var(--rule); background: var(--paper); color: var(--ink-soft);
+}
+.quiz-reset-scores:hover { border-color: var(--wrong); color: var(--wrong); }
 .quiz-bar {
   display: flex; justify-content: flex-end;
   font-size: .82rem; color: var(--ink-soft);
@@ -455,7 +477,7 @@ sup.ref a {
   body { font-size: 10.5pt; line-height: 1.4; }
   .wrap { max-width: none; padding: 0; }
   .nav-links, .ask-teacher, .quiz-reset, .quiz-submit, .quiz-bar,
-  .feedback-block, #owd-progress { display: none !important; }
+  .quiz-reset-scores, .feedback-block, #owd-progress { display: none !important; }
   .callout, .vocab, .goal, .primary-source, .mnemonic { break-inside: avoid; }
   h2, h3 { break-after: avoid; }
   a { color: #000; text-decoration: none; }
@@ -522,3 +544,8 @@ figure.dgm.plain > svg { border: none; background: none; padding: 0; }
 .dg-t.b     { font-weight: 700; }
 .dg-t.on-deep { fill: var(--paper); font-weight: 700; }   /* Text auf dunkler Fläche */
 @media (prefers-color-scheme: dark){ .dg-t.on-deep { fill: #08131b; } }
+
+/* Quick-Reference „Kleines Problem → Sofort-Lösung": Problem-Seite +2, Lösung-Seite +3 */
+.qref .dg-t.b            { font-size: 15px; }   /* Problem-Label + Spaltentitel */
+.qref .dg-t.sm.soft      { font-size: 12px; }   /* engl. Untertitel links */
+.qref .dg-t.sm:not(.soft){ font-size: 14px; }   /* Lösungstext rechts */
