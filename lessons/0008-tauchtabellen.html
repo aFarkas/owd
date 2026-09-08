@@ -1,0 +1,290 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>8 · Tauchtabellen · OWD-SSI</title>
+<link rel="stylesheet" href="../assets/course.css">
+<script src="../assets/quiz.js" defer></script>
+<script src="../assets/progress.js" defer></script>
+</head>
+<body>
+<div class="wrap">
+  <p class="crumbs"><a href="index.html">Kursübersicht</a> · Lektion 8 von 12</p>
+  <p class="kicker">Lektion 8 · SSI Anhang</p>
+  <h1>Tauchtabellen</h1>
+  <p class="lede">Fast jede:r taucht heute mit Computer — trotzdem musst du die <span class="term">Tauchtabelle</span> <span class="en">dive table</span> lesen können. Sie zeigt dir schwarz auf weiß, warum ein zweiter Tauchgang kürzer wird. Wenn du das <em>Verfahren</em> einmal verstehst, verstehst du auch, was dein Computer die ganze Zeit für dich rechnet.</p>
+
+  <div class="goal"><span class="label">Dein Gewinn heute</span>
+  Du kennst die Begriffe der Tauchgangsplanung (Grundzeit, Nullzeit, Reststickstoff, Oberflächenintervall, Wiederholungsgruppe, Gesamtgrundzeit) und kannst den Weg <strong>Tabelle 1 → Oberflächenintervall → Tabelle 2 → Tabelle 3</strong> Schritt für Schritt lesen — an einem durchgerechneten Beispiel entlang.</div>
+
+  <div class="callout note"><span class="label">Worum es hier geht — und worum nicht</span>
+  <p>Ziel dieser Lektion ist die <strong>Methode</strong>: die Begriffe und wie die drei Tabellen ineinandergreifen. Die eigentlichen Zahlenfelder liest du aus der echten SSI-Tabelle ab — die bauen wir hier bewusst <em>nicht</em> nach. Alle Zahlen unten stammen aus den Original-Beispielen von SSI. <strong>Dekompressionstauchgänge</strong> (Tauchgänge, die die Nullzeit überschreiten und Pflicht-Stopps erfordern) sind <strong>kein Bestandteil dieses Kurses</strong> und gehören nicht zum Sporttauchen.</p></div>
+
+  <h2>1. Die Begriffe, die du brauchst</h2>
+  <p>Bevor die Tabellen Sinn ergeben, müssen wir dieselbe Sprache sprechen. Diese Begriffe sind das ganze Vokabular der Tabellenplanung:<sup class="ref"><a href="#s1">1</a></sup></p>
+  <dl class="vocab">
+    <dt>Grundzeit, GZ <span class="en">bottom time</span></dt>
+    <dd>Die Zeit vom <strong>Beginn des Abtauchens</strong> bis zum <strong>Beginn des direkten Aufstiegs</strong>. Nicht erst ab „unten angekommen" — die Uhr läuft ab dem Abtauchen.</dd>
+
+    <dt>Tauchtiefe <span class="en">depth</span></dt>
+    <dd>Die <strong>maximale</strong> Tiefe des Tauchgangs — egal, wie kurz du dort warst. Wolltest du auf 9 m und rutschst auf 12 m, planst du <em>ab sofort</em> mit 12 m.</dd>
+
+    <dt>Nullzeittauchgang <span class="en">no-decompression dive</span></dt>
+    <dd>Ein Tauchgang in Zeit und Tiefe, aus dem du <strong>jederzeit direkt auftauchen</strong> darfst — kein Dekompressionsstopp nötig. Als OWD tauchst du immer so.</dd>
+
+    <dt>Doppler-Nullzeitgrenzen <span class="en">Doppler no-deco limits</span></dt>
+    <dd>Die Nullzeiten in den SSI-Tabellen — gegenüber den alten US-Navy-Tabellen <strong>verkürzt und damit konservativer</strong>, basierend auf Doppler-Ultraschall-Untersuchungen.</dd>
+
+    <dt>Wiederholungsgruppe <span class="en">repetitive group</span></dt>
+    <dd>Der <strong>Buchstabe</strong>, den du nach einem Tauchgang bekommst. Er steht für die Menge Reststickstoff in deinem Gewebe. Je weiter im Alphabet, desto mehr Stickstoff.</dd>
+
+    <dt>Wiederholungstauchgang <span class="en">repetitive dive</span></dt>
+    <dd>Jeder Tauchgang <strong>zwischen 10 Minuten und 12 Stunden</strong> nach dem vorherigen. Darunter zählen beide als <em>ein</em> Tauchgang, darüber ist der Reststickstoff vernachlässigbar.</dd>
+
+    <dt>Oberflächenintervall, OI <span class="en">surface interval</span></dt>
+    <dd>Die Zeit an der Oberfläche zwischen zwei Tauchgängen — vom Auftauchen bis zum nächsten Abtauchen. Je länger, desto mehr Stickstoff baust du ab.</dd>
+
+    <dt>Reststickstoffzeit, RSZ <span class="en">residual nitrogen time</span></dt>
+    <dd>Der Reststickstoff, ausgedrückt <strong>in Minuten</strong>. Du rechnest, als hättest du diese Zeit zu Beginn des nächsten Tauchgangs schon unter Wasser verbracht — sie wird zur Grundzeit <strong>addiert</strong>.</dd>
+
+    <dt>Gesamtgrundzeit, GGZ <span class="en">total bottom time</span></dt>
+    <dd>Die Zeit, die für deine <em>neue</em> Wiederholungsgruppe zählt. Die Formel merkst du dir: <strong>TGZ + RSZ = GGZ</strong> — tatsächliche Grundzeit plus Reststickstoffzeit.</dd>
+  </dl>
+
+  <h2>2. So greifen die drei Tabellen ineinander</h2>
+  <p>Die SSI-Tauchtabelle hat drei Teile, und du liest sie immer in derselben Richtung. Erst gibt dir Tabelle 1 eine Buchstabengruppe, dann verrechnet Tabelle 2 deine Oberflächenpause zu einer kleineren Gruppe, und Tabelle 3 übersetzt diese in eine Reststickstoffzeit für den nächsten Tauchgang:</p>
+
+  <figure class="dgm">
+    <svg viewBox="0 0 560 588" role="img" aria-label="Ablaufdiagramm der Tauchgangsplanung mit den SSI-Tabellen. Schritt 1: Tabelle 1, die Nullzeitentabelle. Aus Tiefe und geplanter Grundzeit liest du deine Wiederholungsgruppe, einen Buchstaben. Danach das Oberflächenintervall, die Zeit an der Oberfläche zwischen zwei Tauchgängen. Schritt 2: Tabelle 2, die Oberflächenintervalltabelle. Aus alter Gruppe und Oberflächenintervall wird eine neue, kleinere Gruppe. Schritt 3: Tabelle 3, die Reststickstoffzeitentabelle. Aus neuer Gruppe und geplanter Tiefe ergeben sich Reststickstoffzeit und angepasste Nullzeit. Zuletzt der Wiederholungstauchgang: tatsächliche Grundzeit plus Reststickstoffzeit ergibt die Gesamtgrundzeit, mit der du zurück in Tabelle 1 die neue Gruppe bestimmst.">
+      <defs>
+        <marker id="arr8" markerWidth="10" markerHeight="10" refX="7" refY="3" orient="auto">
+          <path d="M0,0 L7,3 L0,6 Z" class="dg-f-soft"/>
+        </marker>
+      </defs>
+
+      <!-- Tabelle 1 -->
+      <rect x="18" y="16" width="524" height="92" rx="14" class="dg-f-paper2 dg-s-teal" stroke-width="2"/>
+      <circle cx="48" cy="46" r="15" class="dg-f-deep"/>
+      <text x="48" y="51" text-anchor="middle" class="dg-t b on-deep">1</text>
+      <text x="72" y="45" class="dg-t b lg deep">Tabelle 1 · Nullzeitentabelle</text>
+      <text x="34" y="72" class="dg-t soft">Tiefe + geplante Grundzeit  →  wie lange darfst du bleiben?</text>
+      <text x="34" y="96" class="dg-t teal b">Ergebnis: deine Wiederholungsgruppe (ein Buchstabe)</text>
+      <line x1="48" y1="108" x2="48" y2="136" class="dg-s-soft" stroke-width="2" marker-end="url(#arr8)"/>
+
+      <!-- Oberflächenintervall -->
+      <rect x="18" y="138" width="524" height="60" rx="14" class="dg-f-water dg-s-soft" stroke-width="1.5" stroke-dasharray="5 4"/>
+      <text x="280" y="164" text-anchor="middle" class="dg-t b">Oberflächenintervall (OI)</text>
+      <text x="280" y="184" text-anchor="middle" class="dg-t sm soft">Zeit an der Oberfläche — 10 min bis 12 h</text>
+      <line x1="48" y1="198" x2="48" y2="226" class="dg-s-soft" stroke-width="2" marker-end="url(#arr8)"/>
+
+      <!-- Tabelle 2 -->
+      <rect x="18" y="228" width="524" height="92" rx="14" class="dg-f-paper2 dg-s-teal" stroke-width="2"/>
+      <circle cx="48" cy="258" r="15" class="dg-f-deep"/>
+      <text x="48" y="263" text-anchor="middle" class="dg-t b on-deep">2</text>
+      <text x="72" y="257" class="dg-t b lg deep">Tabelle 2 · Oberflächenintervalltabelle</text>
+      <text x="34" y="284" class="dg-t soft">alte Gruppe + OI  →  Stickstoff baut sich an der Oberfläche ab</text>
+      <text x="34" y="308" class="dg-t teal b">Ergebnis: neue, kleinere Wiederholungsgruppe</text>
+      <line x1="48" y1="320" x2="48" y2="348" class="dg-s-soft" stroke-width="2" marker-end="url(#arr8)"/>
+
+      <!-- Tabelle 3 -->
+      <rect x="18" y="350" width="524" height="92" rx="14" class="dg-f-paper2 dg-s-teal" stroke-width="2"/>
+      <circle cx="48" cy="380" r="15" class="dg-f-deep"/>
+      <text x="48" y="385" text-anchor="middle" class="dg-t b on-deep">3</text>
+      <text x="72" y="379" class="dg-t b lg deep">Tabelle 3 · Reststickstoffzeitentabelle</text>
+      <text x="34" y="406" class="dg-t soft">neue Gruppe + geplante Tiefe  →  Reststickstoff als Zeit</text>
+      <text x="34" y="430" class="dg-t teal b">Ergebnis: RSZ (Minuten) + angepasste Nullzeit</text>
+      <line x1="48" y1="442" x2="48" y2="470" class="dg-s-soft" stroke-width="2" marker-end="url(#arr8)"/>
+
+      <!-- Wiederholungstauchgang -->
+      <rect x="18" y="472" width="524" height="98" rx="14" class="dg-f-tip dg-s-ok" stroke-width="2"/>
+      <text x="280" y="500" text-anchor="middle" class="dg-t b lg" style="fill:var(--ok)">Wiederholungstauchgang</text>
+      <text x="280" y="524" text-anchor="middle" class="dg-t">TGZ + RSZ = GGZ</text>
+      <text x="280" y="546" text-anchor="middle" class="dg-t sm soft">tatsächliche Grundzeit + Reststickstoffzeit = Gesamtgrundzeit</text>
+      <text x="280" y="562" text-anchor="middle" class="dg-t sm teal">→ mit der GGZ zurück in Tabelle 1: neue Gruppe für den nächsten TG</text>
+    </svg>
+    <figcaption>Der feste Ablauf: Tabelle 1 gibt die Gruppe, das Oberflächenintervall führt über Tabelle 2 zu einer kleineren Gruppe, Tabelle 3 macht daraus eine Reststickstoffzeit. Willst du noch einmal tauchen, ergibt TGZ + RSZ = GGZ die neue Gruppe — zurück bei Tabelle 1.</figcaption>
+  </figure>
+
+  <h2>3. Tabelle 1 — die Nullzeitentabelle</h2>
+  <p>Tabelle 1 beantwortet die erste Frage: <strong>Wie lange darf ich in dieser Tiefe bleiben?</strong> Links stehen die Tiefen, direkt daneben die maximale Doppler-Nullzeit. Du liest einfach die Zahl neben deiner Tiefe ab.<sup class="ref"><a href="#s1">1</a></sup></p>
+  <div class="table-scroll">
+  <table>
+    <thead><tr><th>Tiefe</th><th>max. Nullzeit (Beispiele aus SSI)</th></tr></thead>
+    <tbody>
+      <tr><td><strong>9 m</strong></td><td>205 min <span class="small">(die volle Nullzeit nutzt du selten ganz aus — oft bleibst du z. B. nur 35 min)</span></td></tr>
+      <tr><td><strong>10 m</strong></td><td>160 min</td></tr>
+      <tr><td><strong>15 m</strong></td><td>70 min</td></tr>
+      <tr><td><strong>18 m</strong></td><td>50 min</td></tr>
+    </tbody>
+  </table>
+  </div>
+  <p class="small">Das sind <strong>nur die im SSI-Text genannten Beispielzeilen</strong>, keine vollständige Tabelle. Merke dir die Logik, nicht die Felder: <em>je tiefer, desto kürzer.</em></p>
+
+  <div class="callout tip"><span class="label">Die eine Regel beim Ablesen: aufrunden</span>
+  <p>Findest du deinen Wert nicht genau, nimm immer den <strong>nächsthöheren</strong> — bei Tiefe <em>und</em> Zeit. Das ist die sichere Richtung. Beispiel: geplant waren 15 m, der tiefste Punkt lag aber bei <strong>16 m</strong> → du liest bei <strong>18 m</strong> nach (nächste Tiefenzeile). Die Nullzeit dort ist 50 min.</p></div>
+
+  <p>Am Ende von Tabelle 1 steht der wichtige Teil: die <strong>Buchstaben</strong>. Sie geben deinen Reststickstoff nach dem Tauchgang an — und sind der Eingang in Tabelle 2. Ein durchgängiges Beispiel für den Rest der Lektion:</p>
+
+  <div class="callout note"><span class="label">Beispiel-Tauchgang 1 → Gruppe „G"</span>
+  <p>Du tauchst auf <strong>16 m für 36 Minuten</strong>. Tiefe aufrunden: 16 m → Zeile <strong>18 m</strong>. In dieser Zeile gibt es keinen Eintrag für 36 min → aufrunden auf die nächste Zeitgrenze: <strong>40 min</strong>. Die Spalte darunter führt zur Gruppe <strong>„G"</strong>. Du bist jetzt ein „G-Taucher".</p></div>
+
+  <h2>4. Tabelle 2 — das Oberflächenintervall</h2>
+  <p>Ein Tauchgang pro Tag reicht selten. Nach einer Pause an der Oberfläche hast du Stickstoff abgebaut — und darfst wieder tauchen. Tabelle 2, die dreieckige „Restsättigungstabelle", verrechnet deine Oberflächenpause und gibt dir eine <strong>neue, kleinere Gruppe</strong>.<sup class="ref"><a href="#s1">1</a></sup></p>
+
+  <div class="callout safety"><span class="label">Wann ist es überhaupt ein Wiederholungstauchgang?</span>
+  <p>Weniger als <strong>10 Minuten</strong> an der Oberfläche → beide Tauchgänge zählen als <strong>ein</strong> Tauchgang. Mehr als <strong>12 Stunden</strong> Pause → der Reststickstoff ist so gering, dass er nicht mehr zählt (kein Wiederholungstauchgang). Dazwischen: echter Wiederholungstauchgang, du musst rechnen.</p></div>
+
+  <div class="callout note"><span class="label">Beispiel weiter → aus „G" wird „E"</span>
+  <p>Du bleibst <strong>1 Std. 30 Min. (1:30)</strong> an der Oberfläche — Zeit für volle Flaschen und etwas zu essen. In Tabelle 2 gehst du von deiner Gruppe <strong>„G"</strong> nach links bis zum Zeitfenster, das 1:30 enthält: <strong>1:16–1:59</strong>. Von dort folgst du der Spalte nach unten zur neuen Gruppe <strong>„E"</strong>. Der Reststickstoff ist während der Pause gesunken — aus dem G-Taucher ist ein E-Taucher geworden.</p></div>
+
+  <h2>5. Tabelle 3 — die Reststickstoffzeit</h2>
+  <p>Auch nach der Pause steckt noch Stickstoff in dir. Tabelle 3 drückt ihn als <strong>Zeitdefizit</strong> aus: Du planst den nächsten Tauchgang, als hättest du zu Beginn schon eine Weile unter Wasser verbracht. Am Schnittpunkt von <strong>Gruppe</strong> (Spalte) und <strong>Tiefe</strong> (Zeile) stehen <strong>zwei Zahlen</strong>.<sup class="ref"><a href="#s1">1</a></sup></p>
+
+  <div class="callout note"><span class="label">Beispiel weiter → E-Taucher plant 12 m</span>
+  <p>Als <strong>E-Taucher</strong> planst du den zweiten Tauchgang auf <strong>12 m</strong>. Im Feld „E / 12 m" stehen <strong>49</strong> und <strong>81</strong>:</p>
+  <ul>
+    <li><strong>Obere Zahl 49 = Reststickstoffzeit (RSZ).</strong> So viel „Vorbelastung" nimmst du mit — sie zählt beim nächsten Tauchgang mit.</li>
+    <li><strong>Untere Zahl 81 = angepasste Nullzeit (TGZ).</strong> Sie entsteht so: volle Nullzeit auf 12 m = <strong>130 min</strong>, minus RSZ 49 = <strong>81 min</strong>. Dein zweiter Tauchgang muss also <strong>kürzer als 81 Minuten</strong> bleiben.</li>
+  </ul>
+  <p class="small">Diese angepasste Grundzeit bezieht sich rein auf die Doppler-Nullzeitgrenzen — Luftvorrat und dein Computer haben natürlich das letzte Wort.</p></div>
+
+  <h2>6. Noch ein Tauchgang? TGZ + RSZ = GGZ</h2>
+  <p>Willst du nach dem zweiten Tauchgang ein drittes Mal ins Wasser, brauchst du wieder eine Gruppe. Dafür ist die <strong>Gesamtgrundzeit</strong> da: Du addierst deine <em>tatsächliche</em> Grundzeit zur Reststickstoffzeit — und liest mit dieser Summe erneut in Tabelle 1 ab.<sup class="ref"><a href="#s1">1</a></sup></p>
+
+  <div class="callout note"><span class="label">Beispiel-Abschluss → Gruppe „I", dann „F"</span>
+  <p>Der zweite Tauchgang dauerte <strong>40 min</strong> auf 12 m (die tatsächliche Grundzeit, TGZ). Dazu die RSZ aus Tabelle 3: <strong>49 min</strong>.</p>
+  <p><strong>TGZ 40 + RSZ 49 = GGZ 89 min.</strong> Zurück in Tabelle 1, Zeile 12 m: 89 gibt es nicht → aufrunden auf <strong>100</strong>. Die Spalte führt zur Gruppe <strong>„I"</strong>.</p>
+  <p>Nach erneut <strong>1:30</strong> Oberflächenpause: In der „I"-Zeile von Tabelle 2 liegt 1:30 im Fenster <strong>1:30–2:02</strong> → neue Gruppe <strong>„F"</strong>. Planst du den dritten Tauchgang auf <strong>6 m</strong>, zeigt Tabelle 3 <em>keine</em> angepasste Nullzeit: Für <strong>3–6 m</strong> gibt es keine feste Nullzeitgrenze — dort hast du nahezu <strong>unbegrenzte Grundzeit</strong>, auch als Wiederholungstauchgang. Als F-Taucher trägst du auf 6 m aber immer noch <strong>159 min</strong> Reststickstoffzeit mit.</p></div>
+
+  <div class="callout tip"><span class="label">Die zwei goldenen Planungsregeln</span>
+  <p><strong>1. Der tiefste Tauchgang zuerst</strong>, danach immer flacher. <strong>2. Wiederholungstiefen moderat halten.</strong> Wer so plant, bekommt längere Grundzeiten und kürzere Oberflächenpausen — genau wie im Beispiel (16 m → 12 m → 6 m). Umgekehrt (flach zuerst, tief zuletzt) engt dich die Tabelle stark ein.</p></div>
+
+  <div class="callout safety"><span class="label">Wichtig — dieser Kurs ersetzt die Ausbildung nicht</span>
+  <p>Reale Tauchgänge planst du mit deinem <strong>Tauchcomputer</strong> oder der <strong>echten SSI-Tabelle</strong> in der Hand — nicht aus dem Kopf. Diese Lektion lehrt das Verfahren und die Begriffe für Verständnis und Prüfung; sie ersetzt weder die offizielle SSI-Ausbildung noch das Üben mit deiner Tauchlehrer:in. <strong>Dekompressionstauchgänge sind kein Teil dieses Kurses.</strong></p></div>
+
+  <div class="primary-source">
+    <span class="icon">📘</span>
+    <div><span class="label">Primärquelle für heute</span><br>
+    <strong>SSI Open Water Diver — Anhang „Tauchgangsplanung mit den SSI Tauchtabellen"</strong> (Tabelle 1 Nullzeiten, Tabelle 2 Oberflächenintervalle, Tabelle 3 Reststickstoffzeiten). Alle Zahlen und Beispiele oben stammen direkt aus diesem Anhang in deinem SSI Digital Kit / MySSI.</div>
+  </div>
+
+  <h2>Fürs Langzeitgedächtnis</h2>
+  <div class="recall"><div class="r-q">Wann läuft die Grundzeit (GZ) — von wann bis wann?</div><div class="r-a">Vom Beginn des Abtauchens bis zum Beginn des direkten Aufstiegs. Nicht erst „unten".</div></div>
+  <div class="recall"><div class="r-q">Welche Zeitspanne macht einen Tauchgang zum Wiederholungstauchgang?</div><div class="r-a">Zwischen 10 Minuten und 12 Stunden nach dem vorigen. Darunter = ein Tauchgang, darüber zählt der Reststickstoff nicht mehr.</div></div>
+  <div class="recall"><div class="r-q">Wie lautet die Formel für die Gesamtgrundzeit?</div><div class="r-a">TGZ + RSZ = GGZ — tatsächliche Grundzeit plus Reststickstoffzeit. Mit ihr liest du in Tabelle 1 die neue Gruppe.</div></div>
+  <div class="recall"><div class="r-q">In welche Richtung rundest du beim Ablesen — Tiefe und Zeit?</div><div class="r-a">Immer auf den nächsthöheren Wert. Das ist die konservative, sichere Richtung.</div></div>
+  <div class="recall"><div class="r-q">Welche Reihenfolge liest du: welche Tabelle wofür?</div><div class="r-a">Tabelle 1 (Gruppe aus Tiefe+Zeit) → Tabelle 2 (kleinere Gruppe aus OI) → Tabelle 3 (RSZ + angepasste Nullzeit).</div></div>
+
+  <h2>Kurz abgerufen</h2>
+  <div class="quiz" data-mode="practice">
+    <div class="quiz-q" data-answer="1">
+      <p class="quiz-prompt">Was beschreibt die Grundzeit (GZ)?</p>
+      <div class="quiz-options">
+        <button class="quiz-opt">Nur die Zeit, die du am tiefsten Punkt verbringst</button>
+        <button class="quiz-opt">Vom Abtauchen bis zum Beginn des Aufstiegs</button>
+        <button class="quiz-opt">Die gesamte Zeit inklusive Oberflächenpause</button>
+      </div>
+      <div class="quiz-explain">Die Grundzeit läuft vom Beginn des Abtauchens bis zum Beginn des direkten Aufstiegs.</div>
+    </div>
+    <div class="quiz-q" data-answer="2">
+      <p class="quiz-prompt">Dein tiefster Punkt lag bei 16 m, geplant waren 15 m. In welcher Tiefenzeile liest du ab?</p>
+      <div class="quiz-options">
+        <button class="quiz-opt">Bei 15 m, das war ja der Plan</button>
+        <button class="quiz-opt">Bei 12 m, dem nächstflacheren Wert</button>
+        <button class="quiz-opt">Bei 18 m, dem nächsthöheren Wert</button>
+      </div>
+      <div class="quiz-explain">Findest du deinen Wert nicht genau, rundest du immer auf — bei 16 m also auf die Zeile 18 m.</div>
+    </div>
+    <div class="quiz-q" data-answer="0">
+      <p class="quiz-prompt">Wie lang ist laut SSI-Beispiel die maximale Nullzeit auf 10 m?</p>
+      <div class="quiz-options">
+        <button class="quiz-opt">160 Minuten</button>
+        <button class="quiz-opt">70 Minuten</button>
+        <button class="quiz-opt">50 Minuten</button>
+      </div>
+      <div class="quiz-explain">Auf 10 m nennt die Tabelle 160 min; auf 15 m nur noch 70 min — je tiefer, desto kürzer.</div>
+    </div>
+    <div class="quiz-q" data-answer="1">
+      <p class="quiz-prompt">Ab wann gilt ein zweiter Tauchgang als Wiederholungstauchgang?</p>
+      <div class="quiz-options">
+        <button class="quiz-opt">Immer, egal wie lang die Pause war</button>
+        <button class="quiz-opt">Wenn die Oberflächenpause 10 min bis 12 h beträgt</button>
+        <button class="quiz-opt">Erst nach mehr als 12 Stunden Pause</button>
+      </div>
+      <div class="quiz-explain">Unter 10 min zählen beide als ein Tauchgang, über 12 h ist der Reststickstoff vernachlässigbar — dazwischen ist es ein Wiederholungstauchgang.</div>
+    </div>
+    <div class="quiz-q" data-answer="2">
+      <p class="quiz-prompt">Ein Tauchgang auf 16 m für 36 min — auf welche Zeit rundest du in der 18-m-Zeile auf?</p>
+      <div class="quiz-options">
+        <button class="quiz-opt">Auf 30 min abrunden</button>
+        <button class="quiz-opt">36 min genau übernehmen</button>
+        <button class="quiz-opt">Auf 40 min, die nächsthöhere Zeitgrenze</button>
+      </div>
+      <div class="quiz-explain">Es gibt keinen Eintrag für 36 min, also auf 40 min aufrunden — daraus folgt die Gruppe „G".</div>
+    </div>
+    <div class="quiz-q" data-answer="0">
+      <p class="quiz-prompt">Wozu dient Tabelle 2, die Oberflächenintervalltabelle?</p>
+      <div class="quiz-options">
+        <button class="quiz-opt">Sie macht aus deiner Gruppe + OI eine neue, kleinere Gruppe</button>
+        <button class="quiz-opt">Sie gibt die maximale Nullzeit je Tiefe an</button>
+        <button class="quiz-opt">Sie sagt, wie lange du nach dem Tauchen nicht fliegen darfst</button>
+      </div>
+      <div class="quiz-explain">Tabelle 2 verrechnet dein Oberflächenintervall: Aus „G" wird nach 1:30 Pause die Gruppe „E".</div>
+    </div>
+    <div class="quiz-q" data-answer="1">
+      <p class="quiz-prompt">Im Feld „E / 12 m" von Tabelle 3 stehen 49 und 81. Wofür steht die 49?</p>
+      <div class="quiz-options">
+        <button class="quiz-opt">Für die maximale Tiefe des nächsten Tauchgangs</button>
+        <button class="quiz-opt">Für die Reststickstoffzeit (RSZ) in Minuten</button>
+        <button class="quiz-opt">Für die Wassertemperatur in Grad</button>
+      </div>
+      <div class="quiz-explain">Die obere Zahl 49 ist die RSZ; die untere 81 ist die angepasste Nullzeit (130 min auf 12 m minus 49).</div>
+    </div>
+    <div class="quiz-q" data-answer="2">
+      <p class="quiz-prompt">Zweiter Tauchgang: TGZ 40 min, RSZ 49 min. Wie groß ist die Gesamtgrundzeit?</p>
+      <div class="quiz-options">
+        <button class="quiz-opt">40 min — die RSZ zählt hier nicht</button>
+        <button class="quiz-opt">9 min — die Differenz der beiden Werte</button>
+        <button class="quiz-opt">89 min — Summe aus TGZ und RSZ</button>
+      </div>
+      <div class="quiz-explain">TGZ + RSZ = GGZ, also 40 + 49 = 89 min. Aufgerundet auf 100 in Tabelle 1 folgt Gruppe „I".</div>
+    </div>
+    <div class="quiz-q" data-answer="0">
+      <p class="quiz-prompt">Warum gibt Tabelle 3 für einen Tauchgang auf 6 m keine angepasste Nullzeit an?</p>
+      <div class="quiz-options">
+        <button class="quiz-opt">Weil 3–6 m nahezu unbegrenzte Grundzeit haben</button>
+        <button class="quiz-opt">Weil man auf 6 m gar nicht tauchen darf</button>
+        <button class="quiz-opt">Weil dort kein Reststickstoff mehr entsteht</button>
+      </div>
+      <div class="quiz-explain">Für 3–6 m gibt es keine feste Nullzeitgrenze. Reststickstoff bleibt aber: Als F-Taucher trägst du auf 6 m noch 159 min RSZ mit.</div>
+    </div>
+    <div class="quiz-q" data-answer="1">
+      <p class="quiz-prompt">Wie planst du ein Tagesprofil mit mehreren Tauchgängen am sinnvollsten?</p>
+      <div class="quiz-options">
+        <button class="quiz-opt">Flach zuerst, den tiefsten Tauchgang zum Schluss</button>
+        <button class="quiz-opt">Den tiefsten Tauchgang zuerst, danach flacher</button>
+        <button class="quiz-opt">Alle Tauchgänge exakt auf derselben Tiefe</button>
+      </div>
+      <div class="quiz-explain">Tiefster zuerst, dann moderat flacher — das gibt längere Grundzeiten und kürzere Oberflächenpausen (16 m → 12 m → 6 m).</div>
+    </div>
+  </div>
+
+  <div class="ask-teacher"><strong>Ein eigenes Tagesprofil durchrechnen?</strong> Nenn mir Tiefe, Grundzeit und Oberflächenpause — wir gehen Tabelle 1 → 2 → 3 gemeinsam durch, Schritt für Schritt, bis der Ablauf sitzt.</div>
+
+  <div class="nav-links">
+    <a href="0007-notfaelle.html">← Lektion 7</a>
+    <a href="../reference/glossary.html">Glossar</a>
+    <a href="0009-tipps-vor-dem-pool.html">Weiter: Tipps vor dem Pool →</a>
+  </div>
+
+  <div class="sources">
+    <strong>Quellen</strong>
+    <ol>
+      <li id="s1"><span class="off">SSI (offiziell)</span> — Open Water Diver, Anhang „Tauchgangsplanung mit den SSI Tauchtabellen": Terminologie (GZ, Nullzeit-/Wiederholungstauchgang, RSZ, OI, GGZ = TGZ + RSZ), Tabelle 1 (Nullzeiten &amp; Wiederholungsgruppen, u. a. 10 m/160 min, 15 m/70 min, 18 m/50 min, 9 m/205 min; Beispiel 16 m/36 min → „G"), Tabelle 2 (Oberflächenintervalle, 1:30 in 1:16–1:59 → „E"), Tabelle 3 (Reststickstoffzeiten, E/12 m: 49 &amp; 81; 12 m Nullzeit 130 min; F/6 m: 159 min). SSI Digital Kit / MySSI.</li>
+    </ol>
+    <p class="small">Dieser Kurs ersetzt keine Ausbildung durch eine:n zertifizierte:n SSI-Tauchlehrer:in. Reale Tauchgangsplanung erfolgt mit Tauchcomputer oder den echten Tabellen. Dekompressionstauchgänge sind kein Bestandteil dieses Kurses.</p>
+  </div>
+</div>
+</body>
+</html>

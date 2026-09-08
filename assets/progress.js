@@ -175,11 +175,11 @@
 
   /* ------------------------ Startseiten-Dashboard ---------------------- */
   // Reihenfolge = SSI-Kapitelstruktur. 0006 (Kap 5 · Das Meer) und 0008
-  // (Anhang · Tauchtabellen) sind reservierte Slots, deren Inhalt noch folgt —
-  // bis dahin nicht Teil der Fortschrittszählung.
+  // (Anhang · Tauchtabellen) sind jetzt vorhanden und Teil der Fortschrittszählung.
   var LESSON_ORDER = [
     "0001-willkommen", "0002-druck-und-koerper", "0003-ausruestung",
-    "0004-atemgas-stickstoff-nullzeit", "0005-buddy-signale-planung", "0007-notfaelle",
+    "0004-atemgas-stickstoff-nullzeit", "0005-buddy-signale-planung", "0006-das-meer",
+    "0007-notfaelle", "0008-tauchtabellen",
     "0009-tipps-vor-dem-pool", "0010-tipps-vor-dem-freiwasser", "0011-abschlusstest"
   ];
 
