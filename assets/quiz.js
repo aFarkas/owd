@@ -41,20 +41,41 @@
   /* ------------------- Adaptive Frage-Auswahl (Score) -------------------
      Pro Frage merken wir uns im localStorage einen Score:
        +1 pro richtiger, -1 pro falscher Antwort, geklemmt auf -3 … +3.
-       Start = 0.  Score = +3  → "gemeistert", wird nicht mehr gestellt.
+       Start = 0.  Score = +2  → "gemeistert", wird nicht mehr gestellt.
                    Score = -3  → wird sehr wahrscheinlich gestellt.
      Gespeichert je Lektion (lessonId) unter einer stabilen Frage-ID, die
      aus dem Fragetext gehasht wird (überlebt Umsortieren der Fragen).      */
   var SCORE_KEY = "owd-ssi-qscore-v1";
-  var SCORE_MIN = -3, SCORE_MAX = 3, MASTERED = 3;
+  var SCORE_MIN = -3, SCORE_MAX = 3, MASTERED = 2;
 
   function scoreLessonId() {
     var m = (location.pathname.split("/").pop() || "quiz").replace(/\.html?$/i, "");
     return m || "quiz";
   }
   function loadScores() {
-    try { return JSON.parse(localStorage.getItem(SCORE_KEY)) || {}; }
+    var raw;
+    try { raw = JSON.parse(localStorage.getItem(SCORE_KEY)) || {}; }
     catch (e) { return {}; }
+    return normalizeScores(raw);
+  }
+  // Toleriert ältere/kaputte Speicherstände: alles, was keine gültige Zahl
+  // ist, wird verworfen (verhält sich dann wie Score 0). Zahlen werden auf
+  // Ganzzahlen im gültigen Bereich gezogen. Wird beim nächsten saveScores
+  // dauerhaft im aktuellen Format zurückgeschrieben.
+  function normalizeScores(raw) {
+    var clean = {};
+    if (!raw || typeof raw !== "object") return clean;
+    Object.keys(raw).forEach(function (lesson) {
+      var ls = raw[lesson];
+      if (!ls || typeof ls !== "object") return;
+      var out = {};
+      Object.keys(ls).forEach(function (q) {
+        var n = Number(ls[q]);
+        if (isFinite(n)) out[q] = clampScore(Math.round(n));
+      });
+      clean[lesson] = out;
+    });
+    return clean;
   }
   function saveScores(all) {
     try { localStorage.setItem(SCORE_KEY, JSON.stringify(all)); } catch (e) {}
